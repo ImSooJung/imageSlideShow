@@ -36,5 +36,13 @@
             android:src="@drawable/깜찍이"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/콩나물"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/하마하마"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </ViewFlipper>
 </LinearLayout>
