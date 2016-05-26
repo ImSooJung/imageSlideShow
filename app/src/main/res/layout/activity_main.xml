@@ -33,15 +33,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:src="@drawable/깜찍이"
+            android:src="@drawable/img01"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <ImageView
-            android:src="@drawable/콩나물"
+            android:src="@drawable/img02"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <ImageView
-            android:src="@drawable/하마하마"
+            android:src="@drawable/img03"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </ViewFlipper>
