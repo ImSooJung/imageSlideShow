@@ -3,6 +3,7 @@ package kr.hs.emirim.sjung.imageslideshow;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ViewFlipper;
 import android.widget.Button;
 
@@ -10,12 +11,16 @@ import android.widget.Button;
 public class MainActivity extends Activity implements View.OnClickListener{
 
     ViewFlipper flip;
+    EditText editTime;
+    int time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         flip=(ViewFlipper)findViewById(R.id.view_flip);
-        flip.setFlipInterval(1000);//1초간격
+        editTime=(EditText)findViewById(R.id.edit_time);
+
 
         Button butStart=(Button)findViewById(R.id.but_start);
         butStart.setOnClickListener(this);//현재클래스는 온클릭이면서 핸들러가 됨
@@ -36,6 +41,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         switch(v.getId())//메소드로 들어온 매개변수의 id값을 반환
         {
             case R.id.but_start:
+                time=(int)(Double.parseDouble(editTime.getText().toString())*1000);
+                flip.setFlipInterval(1000);//1초간격
                 flip.startFlipping();
                 break;
             case R.id.but_stop:
